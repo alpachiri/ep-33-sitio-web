@@ -1,0 +1,1471 @@
+:root {
+    --color-fondo: #f8fbfe;
+    --color-superficie: #ffffff;
+
+    --color-primario: #7252a3;
+    --color-primario-oscuro: #5c3f8d;
+
+    --color-secundario: #63b5df;
+    --color-celeste-suave: #e9f6fc;
+
+    --color-acento: #865fc0;
+    --color-acento-hover: #68469c;
+
+    --color-verde: #5e9f67;
+
+    --color-texto: #28323a;
+    --color-texto-suave: #687681;
+
+    --borde-suave: #dceaf2;
+
+    --fuente-editorial: 'Georgia', 'Garamond', serif;
+    --fuente-sans: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+
+    --sombra-suave: 0 5px 18px rgba(79, 88, 120, 0.10);
+}
+
+
+/* RESETEO GENERAL */
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    background-color: var(--color-fondo);
+    color: var(--color-texto);
+    font-family: var(--fuente-editorial);
+    line-height: 1.6;
+
+    display: flex;
+    flex-direction: column;
+
+    min-height: 100vh;
+}
+
+a {
+    text-decoration: none;
+    color: inherit;
+}
+
+img {
+    display: block;
+    max-width: 100%;
+}
+
+h1,
+h2,
+h3 {
+    color: var(--color-primario);
+}
+
+
+/* BARRA SUPERIOR */
+
+.top-bar {
+    background-color: var(--color-primario);
+    color: white;
+
+    text-align: center;
+
+    padding: 9px 15px;
+
+    font-family: var(--fuente-sans);
+    font-size: 0.85rem;
+
+    letter-spacing: 0.3px;
+}
+
+
+/* HEADER */
+
+.header-principal {
+    background-color: rgba(255, 255, 255, 0.96);
+
+    border-bottom: 1px solid var(--borde-suave);
+
+    padding: 12px 30px;
+
+    position: sticky;
+    top: 0;
+
+    z-index: 100;
+
+    box-shadow: 0 3px 12px rgba(50, 60, 90, 0.05);
+}
+
+.contenedor-nav {
+    max-width: 1200px;
+
+    margin: 0 auto;
+
+    display: flex;
+
+    justify-content: space-between;
+    align-items: center;
+
+    gap: 2rem;
+}
+
+
+/* LOGO */
+
+.logo-escuela {
+    display: flex;
+    align-items: center;
+
+    gap: 12px;
+}
+
+.logo-escuela img {
+    width: 65px;
+    height: 65px;
+
+    object-fit: contain;
+}
+
+.logo-escuela span {
+    display: block;
+
+    color: var(--color-primario);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 1.4rem;
+    font-weight: 700;
+}
+
+.logo-escuela small {
+    display: block;
+
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+}
+
+
+/* MENÚ */
+
+.menu-navegacion {
+    display: flex;
+
+    list-style: none;
+
+    gap: 1.5rem;
+
+    font-family: var(--fuente-sans);
+}
+
+.menu-navegacion a {
+    font-weight: 500;
+
+    transition: color 0.2s ease;
+}
+
+.menu-navegacion a:hover {
+    color: var(--color-primario);
+}
+
+
+/* CONTENEDOR PRINCIPAL */
+
+.contenedor-pagina {
+    max-width: 1200px;
+
+    width: 100%;
+
+    margin: 2.5rem auto;
+
+    padding: 0 1.5rem;
+
+    flex: 1;
+}
+
+
+/* HERO */
+
+.hero-escuela {
+    display: grid;
+
+    grid-template-columns: 1.1fr 0.9fr;
+
+    min-height: 480px;
+
+    background:
+        linear-gradient(135deg,
+            #eef8fd,
+            #f3edfb);
+
+    border: 1px solid var(--borde-suave);
+
+    border-radius: 18px;
+
+    overflow: hidden;
+
+    box-shadow: var(--sombra-suave);
+
+    margin-bottom: 5rem;
+}
+
+.hero-texto {
+    padding: 4rem;
+
+    display: flex;
+
+    flex-direction: column;
+    justify-content: center;
+}
+
+.etiqueta {
+    color: var(--color-primario);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.78rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 1rem;
+}
+
+.hero-texto h1 {
+    font-size: 3.2rem;
+
+    line-height: 1.1;
+
+    margin-bottom: 1.5rem;
+}
+
+.hero-texto h1 span {
+    display: block;
+
+    margin-top: 10px;
+
+    color: var(--color-secundario);
+
+    font-size: 2rem;
+}
+
+.hero-texto p {
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    max-width: 550px;
+
+    font-size: 1.05rem;
+}
+
+.hero-imagen {
+    min-height: 480px;
+}
+
+.hero-imagen img {
+    width: 100%;
+    height: 100%;
+
+    object-fit: cover;
+}
+
+
+/* BOTONES */
+
+.hero-botones {
+    display: flex;
+
+    gap: 12px;
+
+    margin-top: 1.8rem;
+}
+
+.btn-principal {
+    display: inline-block;
+
+    background-color: var(--color-primario);
+
+    color: white;
+
+    padding: 12px 22px;
+
+    border-radius: 7px;
+
+    font-family: var(--fuente-sans);
+    font-weight: 700;
+
+    transition:
+        background-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.btn-principal:hover {
+    background-color: var(--color-primario-oscuro);
+
+    transform: translateY(-2px);
+}
+
+.btn-secundario {
+    display: inline-block;
+
+    border: 2px solid var(--color-primario);
+
+    color: var(--color-primario);
+
+    padding: 10px 22px;
+
+    border-radius: 7px;
+
+    font-family: var(--fuente-sans);
+    font-weight: 700;
+
+    transition: 0.2s ease;
+}
+
+.btn-secundario:hover {
+    background-color: var(--color-primario);
+
+    color: white;
+}
+
+
+/* TÍTULOS DE SECCIÓN */
+
+.titulo-seccion {
+    max-width: 700px;
+
+    margin: 0 auto 2.5rem;
+
+    text-align: center;
+}
+
+.titulo-seccion span {
+    color: var(--color-secundario);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.8rem;
+    font-weight: 700;
+
+    letter-spacing: 2px;
+}
+
+.titulo-seccion h2 {
+    margin-top: 6px;
+
+    font-size: 2.3rem;
+}
+
+.titulo-seccion p {
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+}
+
+
+/* NUESTRA ESCUELA */
+
+.escuela-contenido {
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 3rem;
+
+    align-items: center;
+
+    margin-bottom: 5rem;
+}
+
+.escuela-foto img {
+    width: 100%;
+    height: 360px;
+
+    object-fit: cover;
+
+    border-radius: 15px;
+
+    box-shadow: var(--sombra-suave);
+}
+
+.escuela-texto h3 {
+    font-size: 1.9rem;
+
+    margin-bottom: 1rem;
+}
+
+.escuela-texto p {
+    margin-bottom: 1rem;
+
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+}
+
+
+/* PROPUESTAS */
+
+.grilla-propuestas {
+    display: grid;
+
+    grid-template-columns: repeat(3, 1fr);
+
+    gap: 1.5rem;
+
+    margin-bottom: 5rem;
+}
+
+.tarjeta-propuesta {
+    background-color: var(--color-superficie);
+
+    border: 1px solid var(--borde-suave);
+
+    border-radius: 14px;
+
+    padding: 2rem;
+
+    box-shadow: var(--sombra-suave);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.tarjeta-propuesta:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 9px 25px rgba(79, 88, 120, 0.14);
+}
+
+.icono-propuesta {
+    font-size: 2.5rem;
+
+    margin-bottom: 1rem;
+}
+
+.tarjeta-propuesta h3 {
+    margin-bottom: 0.6rem;
+}
+
+.tarjeta-propuesta p {
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.95rem;
+}
+
+
+/* INSCRIPCIONES */
+
+.seccion-inscripciones {
+    display: grid;
+
+    grid-template-columns: 1fr 420px;
+
+    background:
+        linear-gradient(135deg,
+            var(--color-celeste-suave),
+            #f4edfa);
+
+    border: 1px solid var(--borde-suave);
+
+    border-radius: 16px;
+
+    overflow: hidden;
+
+    margin: 5rem 0;
+
+    box-shadow: var(--sombra-suave);
+}
+
+.inscripciones-texto {
+    padding: 3rem;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+}
+
+.inscripciones-texto h2 {
+    font-size: 2rem;
+
+    margin-bottom: 1rem;
+}
+
+.inscripciones-texto p {
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    margin-bottom: 1.5rem;
+}
+
+.inscripciones-texto .btn-principal {
+    width: fit-content;
+}
+
+.inscripciones-imagen img {
+    width: 100%;
+    height: 100%;
+
+    max-height: 500px;
+
+    object-fit: cover;
+}
+
+
+/* CONTACTO */
+
+.contacto-grilla {
+    display: grid;
+
+    grid-template-columns: 400px 1fr;
+
+    gap: 2rem;
+
+    margin-bottom: 4rem;
+}
+
+.datos-contacto {
+    display: flex;
+
+    flex-direction: column;
+
+    gap: 1rem;
+}
+
+.dato-contacto {
+    display: flex;
+
+    align-items: center;
+
+    gap: 15px;
+
+    background-color: white;
+
+    border: 1px solid var(--borde-suave);
+
+    border-radius: 10px;
+
+    padding: 1rem 1.2rem;
+
+    box-shadow: 0 3px 10px rgba(79, 88, 120, 0.06);
+}
+
+.dato-contacto>span {
+    font-size: 1.7rem;
+}
+
+.dato-contacto h3 {
+    font-family: var(--fuente-sans);
+
+    font-size: 1rem;
+
+    margin-bottom: 2px;
+}
+
+.dato-contacto p {
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.9rem;
+}
+
+
+/* GOOGLE MAPS */
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+
+    min-height: 400px;
+
+    border: 0;
+
+    border-radius: 14px;
+
+    box-shadow: var(--sombra-suave);
+}
+
+
+/* FOOTER */
+
+.footer-principal {
+    background:
+        linear-gradient(135deg,
+            var(--color-primario-oscuro),
+            var(--color-primario));
+
+    color: white;
+
+    text-align: center;
+
+    padding: 2.5rem 1rem;
+
+    font-family: var(--fuente-sans);
+}
+
+.footer-principal img {
+    width: 75px;
+
+    margin: 0 auto 1rem;
+}
+
+.footer-principal p {
+    margin-bottom: 4px;
+}
+
+.footer-principal small {
+    display: block;
+
+    margin-top: 12px;
+
+    opacity: 0.8;
+}
+
+
+/* TABLETS */
+
+@media (max-width: 950px) {
+
+    .contenedor-nav {
+        flex-direction: column;
+    }
+
+    .menu-navegacion {
+        flex-wrap: wrap;
+
+        justify-content: center;
+    }
+
+    .grilla-propuestas {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .contacto-grilla {
+        grid-template-columns: 1fr;
+    }
+}
+
+
+/* CELULARES */
+
+@media (max-width: 768px) {
+
+    .header-principal {
+        padding: 12px 15px;
+    }
+
+    .logo-escuela img {
+        width: 55px;
+        height: 55px;
+    }
+
+    .menu-navegacion {
+        gap: 0.8rem;
+
+        font-size: 0.9rem;
+    }
+
+    .hero-escuela,
+    .escuela-contenido,
+    .seccion-inscripciones {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-texto {
+        padding: 2rem;
+    }
+
+    .hero-texto h1 {
+        font-size: 2.2rem;
+    }
+
+    .hero-texto h1 span {
+        font-size: 1.5rem;
+    }
+
+    .hero-imagen {
+        min-height: 280px;
+    }
+
+    .grilla-propuestas {
+        grid-template-columns: 1fr;
+    }
+
+    .hero-botones {
+        flex-direction: column;
+    }
+
+    .btn-principal,
+    .btn-secundario {
+        text-align: center;
+    }
+
+    .escuela-foto img {
+        height: 260px;
+    }
+
+    .inscripciones-imagen img {
+        max-height: none;
+    }
+}
+
+/* PÁGINA DE INSCRIPCIONES */
+.pagina-interna {
+    padding: 2rem 0 4rem;
+}
+
+.inscripciones-detalle {
+    display: grid;
+    grid-template-columns: 1fr 420px;
+    gap: 3rem;
+    align-items: center;
+
+    background-color: var(--color-superficie);
+
+    border: 1px solid var(--borde-suave);
+    border-radius: 16px;
+
+    padding: 3rem;
+
+    box-shadow: var(--sombra-suave);
+}
+
+.inscripciones-contenido h2 {
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.inscripciones-contenido p {
+    font-family: var(--fuente-sans);
+    color: var(--color-texto-suave);
+
+    margin-bottom: 1rem;
+}
+
+.inscripciones-contenido .btn-principal {
+    margin-top: 1rem;
+}
+
+.inscripciones-flyer img {
+    width: 100%;
+
+    border-radius: 12px;
+
+    box-shadow: var(--sombra-suave);
+}
+
+@media (max-width: 768px) {
+
+    .inscripciones-detalle {
+        grid-template-columns: 1fr;
+        padding: 1.5rem;
+    }
+
+}
+
+/* ======================================
+   PÁGINA NUESTRA ESCUELA
+====================================== */
+
+.institucional-principal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 3rem;
+
+    align-items: center;
+
+    margin-bottom: 5rem;
+}
+
+.institucional-imagen img {
+    width: 100%;
+    height: 390px;
+
+    object-fit: cover;
+
+    border-radius: 16px;
+
+    box-shadow: var(--sombra-suave);
+}
+
+.institucional-texto h2 {
+    font-size: 2rem;
+
+    margin-bottom: 1rem;
+}
+
+.institucional-texto p {
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    margin-bottom: 1rem;
+}
+
+
+/* VALORES */
+
+.grilla-valores {
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 1.5rem;
+
+    margin-bottom: 5rem;
+}
+
+.tarjeta-valor {
+    background-color: var(--color-superficie);
+
+    border: 1px solid var(--borde-suave);
+
+    border-radius: 14px;
+
+    padding: 2rem;
+
+    text-align: center;
+
+    box-shadow: var(--sombra-suave);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.tarjeta-valor:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 9px 25px rgba(79, 88, 120, 0.14);
+}
+
+.icono-valor {
+    font-size: 2.5rem;
+
+    margin-bottom: 1rem;
+}
+
+.tarjeta-valor h3 {
+    margin-bottom: 0.6rem;
+}
+
+.tarjeta-valor p {
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.95rem;
+}
+
+
+/* IDENTIDAD */
+
+.identidad-escuela {
+    display: grid;
+
+    grid-template-columns: 1fr 320px;
+
+    gap: 3rem;
+
+    align-items: center;
+
+    padding: 3rem;
+
+    background:
+        linear-gradient(135deg,
+            var(--color-celeste-suave),
+            #f4edfa);
+
+    border: 1px solid var(--borde-suave);
+
+    border-radius: 16px;
+
+    box-shadow: var(--sombra-suave);
+}
+
+.identidad-texto h2 {
+    font-size: 2rem;
+
+    margin-bottom: 1rem;
+}
+
+.identidad-texto p {
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    margin-bottom: 1rem;
+}
+
+.identidad-imagen img {
+    width: 100%;
+
+    max-height: 300px;
+
+    object-fit: contain;
+
+    border-radius: 12px;
+}
+
+
+/* TABLET */
+
+@media (max-width: 950px) {
+
+    .grilla-valores {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+}
+
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+
+    .institucional-principal,
+    .identidad-escuela {
+        grid-template-columns: 1fr;
+    }
+
+    .grilla-valores {
+        grid-template-columns: 1fr;
+    }
+
+    .institucional-imagen img {
+        height: 260px;
+    }
+
+    .identidad-escuela {
+        padding: 1.5rem;
+    }
+
+    .identidad-imagen img {
+        max-height: 220px;
+    }
+
+}
+
+/* ======================================
+   PÁGINA DE PROPUESTAS
+====================================== */
+
+.grilla-propuestas-completa {
+    display: grid;
+
+    grid-template-columns: repeat(2, 1fr);
+
+    gap: 1.5rem;
+
+    margin-bottom: 4rem;
+}
+
+.propuesta-completa {
+    display: flex;
+
+    gap: 1.5rem;
+
+    align-items: flex-start;
+
+    background-color: var(--color-superficie);
+
+    border: 1px solid var(--borde-suave);
+
+    border-radius: 14px;
+
+    padding: 2rem;
+
+    box-shadow: var(--sombra-suave);
+
+    transition:
+        transform 0.2s ease,
+        box-shadow 0.2s ease;
+}
+
+.propuesta-completa:hover {
+    transform: translateY(-5px);
+
+    box-shadow: 0 9px 25px rgba(79, 88, 120, 0.14);
+}
+
+.propuesta-icono {
+    font-size: 2.5rem;
+
+    min-width: 55px;
+}
+
+.propuesta-info h2 {
+    font-size: 1.4rem;
+
+    margin-bottom: 0.6rem;
+}
+
+.propuesta-info p {
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.95rem;
+}
+
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+
+    .grilla-propuestas-completa {
+        grid-template-columns: 1fr;
+    }
+
+    .propuesta-completa {
+        flex-direction: column;
+    }
+
+}
+
+/* ======================================
+   PÁGINA DE CONTACTO
+====================================== */
+
+.contacto-pagina {
+    display: grid;
+
+    grid-template-columns: 420px 1fr;
+
+    gap: 2rem;
+
+    margin-bottom: 5rem;
+}
+
+
+/* INFORMACIÓN */
+
+.contacto-informacion {
+    background-color: var(--color-superficie);
+
+    border: 1px solid var(--borde-suave);
+
+    border-radius: 16px;
+
+    padding: 2rem;
+
+    box-shadow: var(--sombra-suave);
+}
+
+.contacto-informacion h2 {
+    font-size: 1.8rem;
+
+    margin-bottom: 1rem;
+}
+
+.contacto-intro {
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    margin-bottom: 2rem;
+}
+
+
+/* CADA DATO */
+
+.contacto-item {
+    display: flex;
+
+    gap: 15px;
+
+    align-items: center;
+
+    padding: 1rem 0;
+
+    border-bottom: 1px solid var(--borde-suave);
+}
+
+.contacto-item:last-child {
+    border-bottom: none;
+}
+
+.contacto-icono {
+    width: 45px;
+    height: 45px;
+
+    display: flex;
+
+    align-items: center;
+    justify-content: center;
+
+    background-color: var(--color-celeste-suave);
+
+    border-radius: 50%;
+
+    font-size: 1.3rem;
+}
+
+.contacto-item h3 {
+    font-family: var(--fuente-sans);
+
+    font-size: 1rem;
+
+    margin-bottom: 2px;
+}
+
+.contacto-item p,
+.contacto-item a {
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.95rem;
+}
+
+.contacto-item a:hover {
+    color: var(--color-primario);
+}
+
+
+/* MAPA */
+
+.contacto-mapa iframe {
+    width: 100%;
+
+    height: 100%;
+
+    min-height: 530px;
+
+    border: 0;
+
+    border-radius: 16px;
+
+    box-shadow: var(--sombra-suave);
+}
+
+
+/* REDES */
+
+.contacto-redes {
+    text-align: center;
+
+    background:
+        linear-gradient(135deg,
+            var(--color-celeste-suave),
+            #f4edfa);
+
+    border: 1px solid var(--borde-suave);
+
+    border-radius: 16px;
+
+    padding: 3rem;
+
+    box-shadow: var(--sombra-suave);
+}
+
+.contacto-redes h2 {
+    font-size: 2rem;
+
+    margin-bottom: 0.5rem;
+}
+
+.contacto-redes p {
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    margin-bottom: 1.5rem;
+}
+
+.botones-redes {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    flex-wrap: wrap;
+
+    gap: 1rem;
+
+    margin-top: 1.5rem;
+}
+
+.btn-red-social {
+    background-color: var(--color-primario);
+
+    color: white;
+
+    padding: 11px 20px;
+
+    border-radius: 7px;
+
+    font-family: var(--fuente-sans);
+
+    font-weight: bold;
+
+    transition: 0.2s ease;
+}
+
+.btn-red-social:hover {
+    background-color: var(--color-primario-oscuro);
+
+    transform: translateY(-2px);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+
+    .contacto-pagina {
+        grid-template-columns: 1fr;
+    }
+
+    .contacto-mapa iframe {
+        min-height: 350px;
+    }
+
+    .botones-redes {
+        flex-direction: column;
+    }
+
+}
+
+/* ======================================
+   PÁGINA DE INICIO
+====================================== */
+
+.inicio {
+    flex: 1;
+}
+
+
+/* PORTADA */
+
+.inicio-portada {
+    min-height: 680px;
+
+    display: flex;
+    flex-direction: column;
+
+    justify-content: center;
+    align-items: center;
+
+    text-align: center;
+
+    padding: 5rem 1.5rem;
+
+    background:
+        linear-gradient(135deg,
+            #eef8fd,
+            #f3edfb);
+}
+
+
+.inicio-logo {
+    margin-bottom: 1.5rem;
+}
+
+
+.inicio-logo img {
+    width: 180px;
+    height: 180px;
+
+    object-fit: contain;
+
+    border-radius: 50%;
+
+    background-color: white;
+
+    padding: 10px;
+
+    box-shadow: var(--sombra-suave);
+}
+
+
+.inicio-etiqueta {
+    color: var(--color-secundario);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 0.8rem;
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 0.5rem;
+}
+
+
+.inicio-portada h1 {
+    font-size: 4rem;
+
+    line-height: 1;
+
+    margin-bottom: 0.5rem;
+}
+
+
+.inicio-portada h2 {
+    color: var(--color-secundario);
+
+    font-size: 2rem;
+
+    font-weight: normal;
+
+    margin-bottom: 1.5rem;
+}
+
+
+.inicio-frase {
+    color: var(--color-primario);
+
+    font-size: 1.3rem;
+
+    margin-bottom: 0.5rem;
+}
+
+
+.inicio-descripcion {
+    max-width: 600px;
+
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    font-size: 1rem;
+}
+
+
+.inicio-botones {
+    display: flex;
+
+    gap: 1rem;
+
+    margin-top: 2rem;
+}
+
+
+/* SEGUNDA PARTE */
+
+.inicio-mensaje {
+    max-width: 1200px;
+
+    margin: 5rem auto;
+
+    padding: 0 1.5rem;
+
+    display: grid;
+
+    grid-template-columns: 1fr 420px;
+
+    gap: 4rem;
+
+    align-items: center;
+}
+
+
+.inicio-mensaje h2 {
+    font-size: 2.3rem;
+
+    margin-bottom: 1rem;
+}
+
+
+.inicio-mensaje p {
+    color: var(--color-texto-suave);
+
+    font-family: var(--fuente-sans);
+
+    max-width: 600px;
+}
+
+
+.inicio-bandera img {
+    width: 100%;
+
+    border-radius: 16px;
+
+    box-shadow: var(--sombra-suave);
+}
+
+
+/* CELULAR */
+
+@media (max-width: 768px) {
+
+    .inicio-portada {
+        min-height: 600px;
+    }
+
+
+    .inicio-logo img {
+        width: 140px;
+        height: 140px;
+    }
+
+
+    .inicio-portada h1 {
+        font-size: 2.8rem;
+    }
+
+
+    .inicio-portada h2 {
+        font-size: 1.5rem;
+    }
+
+
+    .inicio-botones {
+        flex-direction: column;
+
+        width: 100%;
+
+        max-width: 320px;
+    }
+
+
+    .inicio-mensaje {
+        grid-template-columns: 1fr;
+
+        gap: 2rem;
+    }
+
+}
+
+/* PÁGINA ACTIVA EN EL MENÚ */
+
+.menu-navegacion a.activo {
+    color: var(--color-primario);
+    font-weight: 700;
+
+    border-bottom: 2px solid var(--color-secundario);
+
+    padding-bottom: 5px;
+}
+
+.whatsapp-qr {
+    margin-top: 2.5rem;
+
+    text-align: center;
+}
+
+.whatsapp-qr h3 {
+    margin-bottom: 1rem;
+}
+
+.whatsapp-qr img {
+    width: 260px;
+
+    margin: 0 auto;
+
+    border-radius: 14px;
+
+    box-shadow: var(--sombra-suave);
+}
