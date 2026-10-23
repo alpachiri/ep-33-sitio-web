@@ -1469,3 +1469,60 @@ h3 {
 
     box-shadow: var(--sombra-suave);
 }
+
+/* Mejoras de navegación, accesibilidad y pantallas pequeñas */
+:focus-visible {
+    outline: 3px solid var(--color-primario);
+    outline-offset: 3px;
+}
+
+.menu-toggle {
+    display: none;
+    font: 600 1rem var(--fuente-sans);
+    color: var(--color-primario);
+    border: 1px solid var(--borde-suave);
+    border-radius: 8px;
+    padding: 0.65rem 0.85rem;
+    background: white;
+    cursor: pointer;
+}
+
+.menu-navegacion a {
+    display: inline-block;
+    padding: 0.4rem 0;
+}
+
+@media (max-width: 768px) {
+    .contenedor-nav {
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 0.65rem;
+    }
+    .logo-escuela { min-width: 0; }
+    .logo-escuela small { font-size: 0.75rem; }
+    .menu-toggle { display: inline-block; margin-left: auto; }
+    .contenedor-nav nav {
+        display: none;
+        width: 100%;
+    }
+    .contenedor-nav nav.menu-abierto { display: block; }
+    .menu-navegacion {
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        gap: 0;
+        padding: 0.35rem 0 0.65rem;
+    }
+    .menu-navegacion a {
+        display: block;
+        padding: 0.7rem 0.4rem;
+    }
+    .inicio-portada { min-height: auto; padding: 4rem 1.25rem; }
+    .inicio-mensaje { margin: 3rem auto; }
+    .contacto-item { align-items: flex-start; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+    html { scroll-behavior: auto; }
+    *, *::before, *::after { transition-duration: 0.01ms !important; animation-duration: 0.01ms !important; }
+}

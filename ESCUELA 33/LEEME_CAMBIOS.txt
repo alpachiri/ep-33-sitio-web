@@ -1,0 +1,17 @@
+EP 33 - revisión de código
+
+Cambios:
+- Reparado el enlace de consulta en Inscripciones (ahora va a contacto.html).
+- Reparado el botón de Facebook en Contacto.
+- Separados los datos de WhatsApp y dirección en Contacto.
+- Menú móvil desplegable con JavaScript, controles de teclado y atributos accesibles.
+- Agregadas metadescripciones SEO a las cinco páginas.
+- Carga diferida de imágenes secundarias y mejoras de foco y movimiento reducido.
+
+Antes de publicar:
+1. Abrí index.html en el navegador y comprobá las cinco páginas.
+2. Probá el menú desde una pantalla angosta y cada link de contacto.
+3. Confirmá con la escuela que los teléfonos, redes, domicilio y flyer de inscripciones estén vigentes.
+4. Para subir la versión revisada a Netlify usá el contenido de esta carpeta.
+
+Nota: esta revisión no modifica automáticamente el sitio publicado en Netlify.
